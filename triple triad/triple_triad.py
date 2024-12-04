@@ -17,7 +17,7 @@ PLAYER_CARDS_AREA_HEIGHT = 100
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
-# Initialize pygame
+# pygame 초기화
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Triple Triad")
@@ -29,13 +29,13 @@ card_player = pygame.image.load("image/card_player.png")
 card_ai = pygame.image.load("image/card_ai.png")
 board_background = pygame.image.load("image/board_background2.png")
 
-class Button:  # 버튼
+class Button:  
     def __init__(self, img_in, x, y, width, height, img_act, x_act, y_act, action=None):
-        mouse = pygame.mouse.get_pos()  # 마우스 좌표
-        click = pygame.mouse.get_pressed()  # 클릭여부
-        if x + width > mouse[0] > x and y + height > mouse[1] > y:  # 마우스가 버튼안에 있을 때
-            screen.blit(img_act, (x_act, y_act))  # 버튼 이미지 변경
-            if click[0] and action is not None:  # 마우스가 버튼안에서 클릭되었을 때
+        mouse = pygame.mouse.get_pos()  
+        click = pygame.mouse.get_pressed()  
+        if x + width > mouse[0] > x and y + height > mouse[1] > y:  
+            screen.blit(img_act, (x_act, y_act))  
+            if click[0] and action is not None:  
                 time.sleep(0.2)
                 action()
         else:
@@ -72,18 +72,12 @@ class Board:
         self.grid = [[None for _ in range(BOARD_SIZE)] for _ in range(BOARD_SIZE)]
 
     def draw(self):
-       # screen.blit(resize(board_2,1.54),(142,122))
         for row in range(BOARD_SIZE):
             for col in range(BOARD_SIZE):
                 x, y = col * CARD_WIDTH + 150, row * CARD_HEIGHT + INFO_PANEL_HEIGHT + 30
                 pygame.draw.rect(screen, BLACK, (x, y, CARD_WIDTH, CARD_HEIGHT), 1,border_radius=10)
-                #if (row + col)%2 == 0:
-                #    screen.blit(board_even,(x,y))
-                #else :
-                #    screen.blit(board_odd,(x,y))
-
                 if self.grid[row][col]:
-                    self.grid[row][col].draw(x+10, y+10) #여기서 카드 그림
+                    self.grid[row][col].draw(x+10, y+10)
          
         pygame.draw.rect(screen, BLACK, (150, 130, CARD_WIDTH*3, CARD_HEIGHT*3), 4,border_radius=10)
         
