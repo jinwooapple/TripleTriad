@@ -20,9 +20,9 @@
 
 매 게임마다 카드 덱은 무작위로 생성됩니다.
 
-이미지는 카드의 경우 [](https://www.istockphoto.com/kr/%EB%B2%A1%ED%84%B0/%ED%94%8C%EB%A0%88%EC%9D%B4-%EC%B9%B4%EB%93%9C%EC%9D%98-%EB%B0%98%EB%8C%80%EC%AA%BD-gm1249328009-364073402)에서 가져와 가공하여 사용하였고, 나머지는 chatgpt를 활용하여 이미지를 얻은 후 가공하였습니다.
+이미지는 카드의 경우 https://www.istockphoto.com/kr/%EB%B2%A1%ED%84%B0/%ED%94%8C%EB%A0%88%EC%9D%B4-%EC%B9%B4%EB%93%9C%EC%9D%98-%EB%B0%98%EB%8C%80%EC%AA%BD-gm1249328009-364073402에서 가져와 가공하여 사용하였고, 나머지는 chatgpt를 활용하여 이미지를 얻은 후 가공하였습니다.
 
-코드 중 Button class와 title 함수의 경우 [](https://github.com/kulord99/Othello)를 참고하였습니다.
+코드 중 Button class와 title 함수의 경우 https://github.com/kulord99/Othello를 참고하였습니다.
 나머지 부분은 chatgpt를 활용하였습니다.
 
 
