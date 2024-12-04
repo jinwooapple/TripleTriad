@@ -367,6 +367,7 @@ def play():
 
         if not player_turn and ai_cards:
             time.sleep(1)
+            # 난이도 조절
             if random.randint(1,100)<=diff: 
                 card, row, col = ai.choose_move(board)
             else: 
