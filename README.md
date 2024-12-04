@@ -38,10 +38,10 @@
 ![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/difficulty.png)
 
 난이도를 선택하는 화면이 나옵니다.
-1번은 쉬움, 2번은 중간, 3번은 어려움 입니다.
-쉬움 난이도는 70% 확률로 무작위 배치를 하고 30% 확률로 alpha-beta pruning을 실행합니다.
-중간 난이도는 50% 확률로 무작위 배치를 하고 50% 확률로 alpha-beta pruning을 실행합니다.
-어려움 난이도는 30% 확률로 무작위 배치를 하고 70% 확률로 alpha-beta pruning을 실행합니다.
+1번은 쉬움, 2번은 중간, 3번은 어려움 입니다.<br>
+쉬움 난이도는 70% 확률로 무작위 배치를 하고 30% 확률로 alpha-beta pruning을 실행합니다.<br>
+중간 난이도는 50% 확률로 무작위 배치를 하고 50% 확률로 alpha-beta pruning을 실행합니다.<br>
+어려움 난이도는 30% 확률로 무작위 배치를 하고 70% 확률로 alpha-beta pruning을 실행합니다.<br>
 
 그 다음에는 선공 여부를 선택하는 화면이 나옵니다.
 
