@@ -32,13 +32,13 @@ The images used in this project were generated using OpenAI's DALL-E and are sub
 
 ## 2. 게임 시작 및 설정
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/title.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/title.png)
 
 시작 화면에는 게임 시작 버튼이 있습니다. 
 
 이 버튼을 누르면
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/difficulty.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/difficulty.png)
 
 난이도를 선택하는 화면이 나옵니다.
 1번은 쉬움, 2번은 중간, 3번은 어려움 입니다.<br>
@@ -48,7 +48,7 @@ The images used in this project were generated using OpenAI's DALL-E and are sub
 
 그 다음에는 선공 여부를 선택하는 화면이 나옵니다. 여기서 난이도는 쉬움으로 설정하였습니다.
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/turn.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/turn.png)
 
 1번은 선공, 2번은 후공 입니다. 여기서는 선공으로 해 보겠습니다.
 
@@ -56,28 +56,28 @@ The images used in this project were generated using OpenAI's DALL-E and are sub
 
 ## 3. 게임 플레이
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/play_1.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/play_1.png)
 
 게임이 시작되었을 때 화면입니다. 위에는 점수가 표시되고, 그 아래에 보드가 있습니다.
 맨 아래에 자신의 카드를 확인할 수 있습니다.
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/play_1-1.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/play_1-1.png)
 
 후공을 선택하였을 경우의 화면입니다. 후공이므로 카드가 4장만 표시됩니다.
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/play_2.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/play_2.png)
 
 좌우 방향키로 놓을 카드를 선택할 수 있고, 마우스로 보드의 자리를 클릭하여 해당 자리에 카드를 배치할 수 있습니다.
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/play_3.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/play_3.png)
 
 게임이 끝나면 아래에 "Click the screen to see the result"가 출력되고 화면 아무 곳이나 클릭하면
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/result.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/result.png)
 
 이처럼 결과가 표시되고 잠시 후
 
-![image](https://github.com/jinwooapple/TripleTriad/blob/main/triple%20triad/image/markdown/retry_or_exit.png)
+![image](https://github.com/jinwooapple/TripleTriad/blob/main/image/markdown/retry_or_exit.png)
 
 다시하거나 게임을 그대로 종료할 수 있는 화면이 나옵니다.
 다시하기를 선택하면 시작 화면으로 돌아갑니다.
