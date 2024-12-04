@@ -29,13 +29,14 @@ card_player = pygame.image.load("image/card_player.png")
 card_ai = pygame.image.load("image/card_ai.png")
 board_background = pygame.image.load("image/board_background2.png")
 
-class Button:  
+# Button class
+class Button:
     def __init__(self, img_in, x, y, width, height, img_act, x_act, y_act, action=None):
         mouse = pygame.mouse.get_pos()  
         click = pygame.mouse.get_pressed()  
         if x + width > mouse[0] > x and y + height > mouse[1] > y:  
             screen.blit(img_act, (x_act, y_act))  
-            if click[0] and action is not None:  
+            if click[0] and action is not None:
                 time.sleep(0.2)
                 action()
         else:
@@ -77,7 +78,7 @@ class Board:
                 x, y = col * CARD_WIDTH + 150, row * CARD_HEIGHT + INFO_PANEL_HEIGHT + 30
                 pygame.draw.rect(screen, BLACK, (x, y, CARD_WIDTH, CARD_HEIGHT), 1,border_radius=10)
                 if self.grid[row][col]:
-                    self.grid[row][col].draw(x+10, y+10)
+                    self.grid[row][col].draw(x+10, y+10) #여기서 카드 그림
          
         pygame.draw.rect(screen, BLACK, (150, 130, CARD_WIDTH*3, CARD_HEIGHT*3), 4,border_radius=10)
         
@@ -187,14 +188,14 @@ class AI:
         
 
 
-# Utility function for drawing the info panel
+# 점수판 그리는 함수
 def draw_info_panel(player_cards, ai_cards, player_score, ai_score):
     screen.blit(resize(board_background,0.67),(0,0))
     score_text = font.render(f"Player {player_score} : {ai_score} AI", True, BLACK)
     score_width, score_height= score_text.get_size()
     screen.blit(score_text, (SCREEN_WIDTH/2-score_width/2, INFO_PANEL_HEIGHT-score_height/2))
 
-# Utility function for drawing player's cards
+# 플레이어의 카드 그리는 함수
 def draw_player_cards(player_cards, selected_card_index):
     start_x = 40
     y = SCREEN_HEIGHT - PLAYER_CARDS_AREA_HEIGHT + 10
@@ -205,7 +206,7 @@ def draw_player_cards(player_cards, selected_card_index):
             pygame.draw.rect(screen, WHITE, (x - 5, y-25, CARD_WIDTH - 10, CARD_HEIGHT - 10), 3)
         card.draw(x, y-20)
 
-# Function to select starting turn
+# 선공, 후공 결정하는 함수
 def select_starting_turn():
     selecting = True
     while selecting:
@@ -224,6 +225,7 @@ def select_starting_turn():
                 if event.key == pygame.K_2:
                     return False
 
+# 종료 또는 재도전
 def retry():
     selecting = True
     while selecting:
@@ -242,6 +244,7 @@ def retry():
                 if event.key == pygame.K_2:
                     return False
                 
+# 난이도 결정
 def difficulty():
     selecting = True
     while selecting:
@@ -262,13 +265,14 @@ def difficulty():
                 if event.key == pygame.K_3:
                     return 30
 
+# 이미지 크기 변경
 def resize(image, ratio):
     image_width, image_height = image.get_size()
     new_height=ratio * image_height
     new_width=ratio*image_width
     return pygame.transform.scale(image, (new_width, new_height))
 
-# Function to check game result and display it on the board
+# 결과 표시하는 함수
 def display_game_result(player_turn, player_score):
     if player_turn:  # Player went first
         if player_score >= 6:
@@ -285,8 +289,8 @@ def display_game_result(player_turn, player_score):
         else:
             result_text = "You lose!"
     
-    # Display the result on the board
-    screen.fill(BLACK)  # Clear the screen
+    # 결과 표시
+    screen.fill(BLACK)
     text_surface = font.render(result_text, True, WHITE)
     text_rect = text_surface.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
     screen.blit(text_surface, text_rect)
@@ -310,9 +314,10 @@ def title():
         clock.tick(15)
 
 def play():
-    diff=difficulty()
-    player_turn = select_starting_turn()
+    diff=difficulty() # 난이도
+    player_turn = select_starting_turn() # 선공 또는 후공
     who_is_first = player_turn
+    # 카드 덱 생성
     player_cards = [Card(random.randint(1, 10), random.randint(1, 10), random.randint(1, 10), random.randint(1, 10), 'player') for _ in range(5 if player_turn else 4)]
     ai_cards = [Card(random.randint(1, 10), random.randint(1, 10), random.randint(1, 10), random.randint(1, 10), 'AI') for _ in range(5 if not player_turn else 4)]
     board = Board()
@@ -372,7 +377,7 @@ def play():
                 board.check_control(row, col)
                 player_turn = True
         
-        # Calculate scores
+        # 점수 계산
         player_score = sum(1 for row in board.grid for card in row if card and card.owner == 'player')
         ai_score = sum(1 for row in board.grid for card in row if card and card.owner == 'AI')
 
